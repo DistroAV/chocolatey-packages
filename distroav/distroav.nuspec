@@ -6,16 +6,16 @@
     <id>distroav</id>
     <version>6.2.2</version>
     <packageSourceUrl>https://github.com/distroav/chocolatey-packages/tree/master/distroav</packageSourceUrl>
-    <owners>flcdrg</owners>
+    <owners>distroav</owners>
     <title>DistroAV: NDI integration for OBS Studio</title>
     <authors>DistroAV Project</authors>
     <projectUrl>https://github.com/DistroAV/DistroAV</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/aeliussaionji/chocopkgs@979a823c98cedde055c6004aebfc6d8a7bdef796/icons/obs-studio.png</iconUrl>
-    <licenseUrl>https://raw.githubusercontent.com/DistroAV/DistroAV/master/LICENSE</licenseUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/DistroAV/DistroAV@6.2.2/assets/distroav-logo-512x512.png</iconUrl>
+    <licenseUrl>https://distroav.org/license</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/DistroAV/DistroAV</projectSourceUrl>
     <bugTrackerUrl>https://github.com/DistroAV/DistroAV/issues</bugTrackerUrl>
-    <tags>obs obs-studio ndi</tags>
+    <tags>obs obs-studio ndi obs-ndi</tags>
     <summary>NDI integration for OBS Studio</summary>
     <description>Network Audio/Video in OBS-Studio using NDI technology
 
