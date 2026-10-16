@@ -5,12 +5,12 @@ $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $oldPackageId = "obs-ndi"
 
 # Check if the deprecated package is currently installed locally
-$installedPackages = choco list --local-only
+$installedPackages = choco list
 
 if ($installedPackages -match $oldPackageId) {
     Write-ChocolateyProvidingHint "Found deprecated package '$oldPackageId'. Uninstalling it before proceeding..."
     # Removes the Chocolatey tracking of obs-ndi without uninstalling as this can cause more problem than solve
-    choco uninstall $oldPackageId -y -n --remove-dependencies --skip-autouninstaller
+    choco uninstall $oldPackageId -y -n --skip-autouninstaller
 } else {
     Write-Verbose "No old deprecated '$oldPackageId' found. Proceeding with clean install."
 }
