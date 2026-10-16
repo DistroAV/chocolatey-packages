@@ -1,0 +1,97 @@
+name: CI
+
+on:
+  push:
+    branches: ["master"]
+
+  schedule:
+    - cron: "0 0 * * *"
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build
+    runs-on: windows-latest
+    permissions:
+      contents: write
+    env:
+      DOTNET_CLI_TELEMETRY_OPTOUT: 1
+      DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
+      DOTNET_NOLOGO: true
+      DOTNET_GENERATE_ASPNET_CERTIFICATE: false
+      DOTNET_ADD_GLOBAL_TOOLS_TO_PATH: false
+      DOTNET_MULTILEVEL_LOOKUP: 0
+      DOTNET_SYSTEM_CONSOLE_ALLOW_ANSI_COLOR_REDIRECTION: true
+      TERM: xterm
+
+    steps:
+      # Install a customised version of Chocolatey-AU PowerShell module
+      # If my PR (https://github.com/chocolatey-community/chocolatey-au/pull/53) ever gets merged,
+      # then we can revert back to use the official module
+      - uses: actions/checkout@v7
+        with:
+          repository: "flcdrg/chocolatey-au"
+          path: "chocolatey-au"
+          ref: "simplify"
+          persist-credentials: false
+
+      - name: Install
+        run: |
+          $ErrorActionPreference = "Stop"
+          $PSNativeCommandUseErrorActionPreference = $true
+
+          $module_name = 'Chocolatey-AU'
+
+          $module_dst  = "$Env:ProgramFiles\PowerShell\Modules\$module_name"
+
+          New-Item -ItemType Directory "$module_dst" -ErrorAction Ignore | Out-Null
+
+          Copy-Item -Recurse -Force ./src/* $module_dst -Verbose
+
+          Get-InstalledModule | Select-Object Name, Version, InstalledLocation
+
+          choco install vt-cli chocolatey-community-validation.extension -y
+        shell: pwsh
+        working-directory: chocolatey-au
+
+      - name: Enable Git symlinks
+        run: git config --global core.symlinks true
+        shell: pwsh
+
+      - uses: actions/checkout@v7
+        with:
+          path: "packages"
+
+      - name: Configure Git
+        run: |
+          git config user.email "david@gardinerfamily.au"
+          git config user.name "David Gardiner"
+        working-directory: packages
+
+      - name: Setup .NET SDK
+        uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: "10.0.x"
+
+      - name: Run
+        run: |
+          dnx --yes flcdrg.au
+        env:
+          PACKAGES_REPO: "${{ github.workspace }}\\packages"
+          github_api_key: ${{ github.token }} # GitHub Actions token
+          api_key: ${{ secrets.API_KEY }} # Chocolatey API Key
+          VT_APIKEY: ${{ secrets.VT_APIKEY }} # VirusTotal API Key
+        continue-on-error: true
+
+      - name: Status
+        run: |
+          git status
+
+          git push
+          git push -q --tags
+
+          git log --max-count 2 --pretty=medium
+
+          Get-ChildItem -Recurse *.nupkg | Select-Object -ExpandProperty FullName
+        working-directory: packages
