@@ -10,7 +10,6 @@
     <title>[Deprecated] NDI integration for OBS Studio</title>
     <authors>DistroAV Project</authors>
     <projectUrl>https://github.com/DistroAV/DistroAV</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/DistroAV/DistroAV@6.2.2/assets/distroav-logo-512x512.png</iconUrl>
     <licenseUrl>https://distroav.org/license</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/DistroAV/DistroAV</projectSourceUrl>
