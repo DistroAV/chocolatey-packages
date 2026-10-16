@@ -65,8 +65,8 @@ jobs:
 
       - name: Configure Git
         run: |
-          git config user.email "david@gardinerfamily.au"
-          git config user.name "David Gardiner"
+          git config user.email "dev@distroav.org"
+          git config user.name "DistroAV Org"
         working-directory: packages
 
       - name: Setup .NET SDK
@@ -76,12 +76,13 @@ jobs:
 
       - name: Run
         run: |
+          # Custom chocolatey package automatic updates by @flcdrg
           dnx --yes flcdrg.au
         env:
           PACKAGES_REPO: "${{ github.workspace }}\\packages"
           github_api_key: ${{ github.token }} # GitHub Actions token
-          api_key: ${{ secrets.API_KEY }} # Chocolatey API Key
-          VT_APIKEY: ${{ secrets.VT_APIKEY }} # VirusTotal API Key
+          api_key: ${{ secrets.CHOCOLATEY_API_KEY }} # Chocolatey API Key
+          VT_APIKEY: ${{ secrets.VIRUSTOTAL_APIKEY }} # VirusTotal API Key
         continue-on-error: true
 
       - name: Status
