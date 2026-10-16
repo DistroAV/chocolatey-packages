@@ -8,10 +8,10 @@ $oldPackageId = "obs-ndi"
 $installedPackages = choco list
 
 if ($installedPackages -match $oldPackageId) {
-    Write-ChocolateyWarning "Found deprecated conflicting package '$oldPackageId'. Uninstalling it before proceeding..."
+    Write-Host "Found deprecated conflicting package '$oldPackageId'. Uninstalling it before proceeding..."
     # Removes the Chocolatey tracking of obs-ndi without uninstalling as this can cause more problem than solve
     choco uninstall $oldPackageId -y -n --skip-autouninstaller
-    Write-ChocolateySuccess "Successfully uninstalled deprecated package '$oldPackageId'."
+    Write-Host "Successfully uninstalled deprecated package '$oldPackageId'."
 } else {
     Write-Verbose "No old deprecated '$oldPackageId' found. Proceeding with clean install."
 }
