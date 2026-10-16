@@ -6,7 +6,7 @@
     <id>distroav</id>
     <version>6.2.2</version>
     <packageSourceUrl>https://github.com/distroav/chocolatey-packages/tree/master/distroav</packageSourceUrl>
-    <owners>distroav</owners>
+    <owners>flcdrg, trouffman</owners>
     <title>DistroAV: NDI integration for OBS Studio</title>
     <authors>DistroAV Project</authors>
     <projectUrl>https://github.com/DistroAV/DistroAV</projectUrl>
