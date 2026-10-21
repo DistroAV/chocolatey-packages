@@ -9,7 +9,7 @@ $packageArgs = @{
   
   validExitCodes = @(0)
   url            = "http://ndi.link/NDIRedistV6"
-  checksum       = '42C99EDC08272224F9D59C1D9063B8F19EFF40E30FE5EB00657E1BCEB9F73AFF'
+  checksum       = '7EE73EEDB56402BCA5100868353DBAB4E944B6C37D2D9881580698A3B61346CD'
   checksumType   = 'sha256'
   destination    = $toolsDir
 }
