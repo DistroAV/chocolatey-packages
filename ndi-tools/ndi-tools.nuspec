@@ -5,11 +5,11 @@
     <id>ndi-tools</id>
     <version>6.3.2</version>
     <packageSourceUrl>https://github.com/distroav/chocolatey-packages/tree/master/ndi-tools</packageSourceUrl>
-    <owners>flcdrg</owners>
+    <owners>flcdrg, trouffman</owners>
     <title>NDI Tools</title>
     <authors>Vizrt NDI AB</authors>
     <projectUrl>https://ndi.video/tools/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/flcdrg/au-packages@refs/heads/master/ndi-tools/icons/ndi.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/distroav/chocolatey-packages@master/ndi-tools/icons/ndi.png</iconUrl>
     <copyright>Vizrt NDI AB</copyright>
     <licenseUrl>https://docs.ndi.video/all/using-ndi/ndi-tools/installing-ndi-tools/software-license-agreement</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
@@ -19,12 +19,6 @@
     <description>NDI Tools is a free suite of applications and plugins for discovering, monitoring, routing, capturing, and sharing NDI audio and video streams across your network.
 
 It includes utilities such as Discovery, Access Manager, Studio Monitor, Router, Screen Capture, Webcam Input, Bridge, and additional plugins that help build and operate NDI-based production workflows on Windows.
-
-### Minimum system requirements
-
-- Windows 10 (64-bit) or later
-- Intel or AMD CPUs with SSE4 or later
-- GPU: NVIDIA, AMD, Intel GPU/APU • 6Gb of RAM or better
 </description>
     <releaseNotes>https://docs.ndi.video/all/using-ndi/ndi-tools/release-notes</releaseNotes>
   </metadata>
