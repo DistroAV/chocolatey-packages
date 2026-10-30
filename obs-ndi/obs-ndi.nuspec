@@ -19,6 +19,8 @@
     <description>[Deprecated] Network A/V in OBS Studio with NDI technology.
 The obs-ndi package has been deprecated and superseeded by DistroAV.
 Read more about the transition to DistroAV at https://github.com/DistroAV/DistroAV/wiki/OBS%E2%80%90NDI-Is-Now-DistroAV
+You should remove obs-ndi from chocolatey by running `choco uninstall obs-ndi` once distroav is installed.
+Any future updates are exclusively available through the DistroAV package via `choco install distroav`.
     </description>
     <releaseNotes>https://github.com/DistroAV/DistroAV/wiki/OBS%E2%80%90NDI-Is-Now-DistroAV</releaseNotes>
     <dependencies>
