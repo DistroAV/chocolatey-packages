@@ -4,12 +4,12 @@
   <metadata>
     <id>ndi-runtime</id>
     <version>6.3.2</version>
-    <packageSourceUrl>https://github.com/distroav/chocolatey-packages/tree/master/ndi-runtime</packageSourceUrl>
+    <packageSourceUrl>https://github.com/distroav/chocolatey-packages/tree/main/ndi-runtime</packageSourceUrl>
     <owners>flcdrg</owners>
     <title>NDI Runtime</title>
     <authors>Vizrt NDI AB</authors>
     <projectUrl>https://ndi.video/tools/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/flcdrg/au-packages@master/ndi-runtime/icons/ndi-icon.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/DistroAV/chocolatey-packages@main/ndi-runtime/icons/ndi.png</iconUrl>
     <copyright>Vizrt NDI AB</copyright>
     <licenseUrl>https://docs.ndi.video/all/using-ndi/ndi-tools/installing-ndi-tools/software-license-agreement</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
