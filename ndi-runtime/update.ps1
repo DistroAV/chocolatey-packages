@@ -3,7 +3,7 @@ Import-Module chocolatey-au
 $ErrorActionPreference = 'Stop'
 
 $versionUrl = 'https://downloads.ndi.tv/Tools/ndi_tools_win_current_version.json'
-$installerUrl = 'http://ndi.link/NDIRedistV6'
+$installerUrl = 'https://downloads.ndi.tv/SDK/NDI_SDK/NDI%206%20Runtime.exe'
 
 function global:au_SearchReplace {
   @{

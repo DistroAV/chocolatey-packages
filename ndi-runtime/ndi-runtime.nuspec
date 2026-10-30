@@ -4,19 +4,19 @@
   <metadata>
     <id>ndi-runtime</id>
     <version>6.3.2</version>
-    <packageSourceUrl>https://github.com/distroav/chocolatey-packages/tree/master/ndi-runtime</packageSourceUrl>
+    <packageSourceUrl>https://github.com/distroav/chocolatey-packages/tree/main/ndi-runtime</packageSourceUrl>
     <owners>flcdrg, trouffman</owners>
     <title>NDI Runtime</title>
     <authors>Vizrt NDI AB</authors>
     <projectUrl>https://ndi.video/tools/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/distroav/chocolatey-packages@master/ndi-runtime/icons/ndi-icon.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/distroav/chocolatey-packages@6350b7181961143cb996f4b6a0a75612143fbe69/ndi-runtime/icons/ndi.png</iconUrl>
     <copyright>Vizrt NDI AB</copyright>
     <licenseUrl>https://docs.ndi.video/all/using-ndi/ndi-tools/installing-ndi-tools/software-license-agreement</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <docsUrl>https://docs.ndi.video/all/using-ndi/ndi-tools</docsUrl>
-    <tags>ndi obs</tags>
+    <tags>ndi runtime distroav obs</tags>
     <summary>Runtime for NDI tools and plugins</summary>
-    <description>This is the runtime library for NDI tools. It is used by those tools available at [https:ndi.video/tools/](https:ndi.video/tools/) and also 3rd party extensions to other software like OBS Studio.
+    <description>This is the runtime library for NDI. It is used by the NDI Tools available at [https:ndi.video/tools/](https:ndi.video/tools/) and also 3rd party extensions to other software DistroAV (NDI plugin for OBS Studio).
     
     NDI stands for Network Device Interface, a video connectivity standard that enables multimedia systems to identify and communicate with one another over IP and to encode, transmit, and receive high-quality, low latency, frame-accurate video and audio, and exchange metadata in real-time.    
     </description>
