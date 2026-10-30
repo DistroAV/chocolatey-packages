@@ -20,5 +20,16 @@ $packageArgs = @{
 
 Install-ChocolateyPackage @packageArgs
 
+# Detect if the deprecated OBS-NDI package is installed
+$chocoRoot = if ($env:ChocolateyInstall) { $env:ChocolateyInstall } else { 'C:\ProgramData\chocolatey' }
+$installed = Test-Path (Join-Path $chocoRoot 'lib\obs-ndi\obs-ndi.nupkg')
+
 # Add a warning if the older obs-ndi installation is detected
-Write-Warning "OBS-NDI is now DistroAV. If you have the deprecated OBS-NDI package installed, remove it with 'choco uninstall obs-ndi -y --skipautouninstaller'."
+if ($installed) {
+  Write-Warning $(
+    "OBS-NDI is now DistroAV.
+Remove the deprecated OBS-NDI package from Chocolatey with
+choco uninstall obs-ndi"
+  )
+}
+

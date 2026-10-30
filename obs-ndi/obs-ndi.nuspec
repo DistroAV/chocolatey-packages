@@ -22,7 +22,7 @@ Read more about the transition to DistroAV at https://github.com/DistroAV/Distro
     </description>
     <releaseNotes>https://github.com/DistroAV/DistroAV/wiki/OBS%E2%80%90NDI-Is-Now-DistroAV</releaseNotes>
     <dependencies>
-      <dependency id="distroav" version="6.2.2" />
+      <dependency id="distroav" version="6.2.2.20261030" />
     </dependencies>
   </metadata>
   <files />
