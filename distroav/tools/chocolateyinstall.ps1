@@ -32,4 +32,3 @@ Remove the deprecated OBS-NDI package from Chocolatey with
 choco uninstall obs-ndi"
   )
 }
-

@@ -9,7 +9,7 @@
     <title>NDI Tools</title>
     <authors>Vizrt NDI AB</authors>
     <projectUrl>https://ndi.video/tools/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/distroav/chocolatey-packages@master/ndi-tools/icons/ndi.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/distroav/chocolatey-packages@6350b7181961143cb996f4b6a0a75612143fbe69/ndi-tools/icons/ndi.png</iconUrl>
     <copyright>Vizrt NDI AB</copyright>
     <licenseUrl>https://docs.ndi.video/all/using-ndi/ndi-tools/installing-ndi-tools/software-license-agreement</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
