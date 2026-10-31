@@ -4,7 +4,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>distroav</id>
-    <version>6.2.2</version>
+    <version>6.2.2.20261030</version>
     <packageSourceUrl>https://github.com/distroav/chocolatey-packages/tree/main/distroav</packageSourceUrl>
     <owners>flcdrg, trouffman</owners>
     <title>DistroAV: NDI integration for OBS Studio</title>
