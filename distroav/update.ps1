@@ -9,6 +9,9 @@ function global:au_SearchReplace {
       "(?i)(^[$]url\s*=\s*)'.*'"        = "`${1}'$($Latest.URL32)'"
       "(?i)(^[$]checksum\s*=\s*)'.*'"   = "`${1}'$($Latest.Checksum32)'"
     }
+    "$($Latest.PackageName).nuspec" = @{
+      "(<packageSourceUrl>).*?(</packageSourceUrl>)" = "`${1}https://github.com/DistroAV/chocolatey-packages/tree/$($Latest.PackageName)-$($Latest.Version)/$($Latest.PackageName)`${2}"
+    }
   }
 }
 
