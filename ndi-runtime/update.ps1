@@ -10,9 +10,6 @@ function global:au_SearchReplace {
     '.\tools\chocolateyInstall.ps1' = @{
       "(?i)(^\s*checksum\s*=\s*)'.*'" = "`${1}'$($Latest.Checksum32)'"
     }
-    "$($Latest.PackageName).nuspec" = @{
-      "(<packageSourceUrl>).*?(</packageSourceUrl>)" = "`${1}https://github.com/DistroAV/chocolatey-packages/tree/$($Latest.PackageName)-$($Latest.Version)/$($Latest.PackageName)`${2}"
-    }
   }
 }
 
